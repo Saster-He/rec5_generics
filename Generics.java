@@ -14,15 +14,15 @@ public class Generics {
     
     public static void main(String[] args) {
         Dalmatian[] puppies = new Dalmatian[9];
-		puppies[0] = new Dalmatian("Pongo", 4);
-		puppies[1] = new Dalmatian("Perdita", 5);
-		puppies[2] = new Dalmatian("Patch", 3);
-		puppies[3] = new Dalmatian("Lucky", 14);
-		puppies[4] = new Dalmatian("Rolly", 18);
-		puppies[5] = new Dalmatian("Penny", 36);
-		puppies[6] = new Dalmatian("Freckles", 49);
-		puppies[7] = new Dalmatian("Pepper", 72);
-		puppies[8] = new Dalmatian("Whitie", 0);
+        puppies[0] = new Dalmatian("Pongo", 4);
+        puppies[1] = new Dalmatian("Perdita", 5);
+        puppies[2] = new Dalmatian("Patch", 3);
+        puppies[3] = new Dalmatian("Lucky", 14);
+        puppies[4] = new Dalmatian("Rolly", 18);
+        puppies[5] = new Dalmatian("Penny", 36);
+        puppies[6] = new Dalmatian("Freckles", 49);
+        puppies[7] = new Dalmatian("Pepper", 72);
+        puppies[8] = new Dalmatian("Whitie", 0);
         
         List<Dalmatian> pupList = makeList(puppies);
         Map<Integer, Dalmatian> pupMap = makeMap(puppies);
