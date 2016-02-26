@@ -99,8 +99,7 @@ public class Generics {
         System.out.println("List Example");
         for(int i = 0; i < puppies.size(); i++) {
             Dalmatian pup = puppies.get(i);
-            System.out.println(pup.getName() + " has " +
-                               pup.getNumSpots() + " spots.");
+            System.out.println(pup.getName());
         }
         System.out.println();
     }
@@ -121,8 +120,7 @@ public class Generics {
         System.out.println("Map as Array Example");
         for(int i = 0; i < puppies.size(); i++) {
             Dalmatian pup = puppies.get(i);
-            System.out.println(pup.getName() + " has " +
-                               pup.getNumSpots() + " spots.");
+            System.out.println(pup);
         }
         System.out.println();
     }
