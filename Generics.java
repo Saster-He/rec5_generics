@@ -1,4 +1,6 @@
 
+package rec5_generics;
+
 import java.util.List;
 import java.util.LinkedList;
 import java.util.ArrayList;
@@ -6,29 +8,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 
-class Dalmatian {
-    private String name;
-    private int numSpots;
-
-    public Dalmatian() {
-        name = "Spot";
-        numSpots = 101;
-    }
-
-    public Dalmatian(String myName,
-                     int spots) {
-        name = myName;
-        numSpots = spots;
-    }
-
-    String getName() {
-        return name;
-    }
-
-    int getNumSpots() {
-        return numSpots;
-    }
-}
+import java.util.Set;
 
 public class Generics {
     
@@ -49,6 +29,9 @@ public class Generics {
         arrayExample(puppies);
         listExample(pupList);
         mapExample(pupMap);
+
+        Map<String, Dalmatian> ntdMap = mapNameToDalmatian(puppies);
+        nameMapExample(ntdMap);
     }
 
     public static Map<Integer, Dalmatian> makeMap(Dalmatian[] puppies) {
@@ -72,8 +55,7 @@ public class Generics {
         System.out.println("Array Example");
         for(int i = 0; i < puppies.length; i++) {
             Dalmatian pup = puppies[i];
-            System.out.println(pup.getName() + " has " +
-                               pup.getNumSpots() + " spots.");
+            System.out.println(pup);
         }
         System.out.println();
     }
@@ -89,11 +71,34 @@ public class Generics {
     }
 
     public static void mapExample(Map<Integer, Dalmatian> puppies) {
-        System.out.println("Map Example");
+        System.out.println("Map as Array Example");
         for(int i = 0; i < puppies.size(); i++) {
             Dalmatian pup = puppies.get(i);
             System.out.println(pup.getName() + " has " +
                                pup.getNumSpots() + " spots.");
+        }
+        System.out.println();
+    }
+
+    public static Map<String, Dalmatian> mapNameToDalmatian(Dalmatian[] puppies) {
+        // Maps are like a generalization of arrays
+        // Unlike arrays, you have no guarantee 
+        Map<String, Dalmatian> map = new HashMap<String, Dalmatian>();
+        for(int i = 0; i < puppies.length; i++) {
+            Dalmatian pup = puppies[i];
+            map.put(pup.getName(), pup);
+        }
+        return map;
+    }
+
+    public static void nameMapExample(Map<String, Dalmatian> puppies) {
+        System.out.println("Map as Name Lookup Example");
+        
+        // This time with the for-each syntax
+        // This iterates over all of the dalmatians currently in the map
+        // Note the change in the order of the output!
+        for(String name : puppies.keySet()) {
+            System.out.println(name + ": " + puppies.get(name));
         }
         System.out.println();
     }
