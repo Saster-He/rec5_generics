@@ -12,14 +12,14 @@ public class Generics {
     public static void main(String[] args) {
 	// Initialize an array as a default test case
         Dalmatian[] puppies = new Dalmatian[9];
-        puppies[0] = new Dalmatian("Latch", 4);
-        puppies[1] = new Dalmatian("Jolly", 5);
-        puppies[2] = new Dalmatian("Lenny", 3);
-        puppies[3] = new Dalmatian("Salter", 14);
-        puppies[4] = new Dalmatian("Blob", 0);
-        puppies[5] = new Dalmatian("Blot", 1);
-        puppies[6] = new Dalmatian("Dot", 2);
-        puppies[7] = new Dalmatian("Blackie", 1);
+        puppies[0] = new Dalmatian("Pongo", 4);
+        puppies[1] = new Dalmatian("Perdita", 5);
+        puppies[2] = new Dalmatian("Patch", 3);
+        puppies[3] = new Dalmatian("Lucky", 14);
+        puppies[4] = new Dalmatian("Rolly", 18);
+        puppies[5] = new Dalmatian("Penny", 36);
+        puppies[6] = new Dalmatian("Freckles", 49);
+        puppies[7] = new Dalmatian("Pepper", 72);
         puppies[8] = new Dalmatian("Whitie", 0);
 
 	// Build an analogy between arrays and lists and maps
